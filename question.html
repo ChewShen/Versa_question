@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BIG BANG Generator</title>
+</head>
+<body>
+  
+<h2 id="output"></h2>
+  <script>
+   
+      const result = [];
+
+      for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+          result.push("BIG BANG");
+        } else if (i % 3 === 0) {
+          result.push("BIG");
+        } else if (i % 5 === 0) {
+          result.push("BANG");
+        } else {
+          result.push(i.toString());
+        }
+      }
+      
+
+      const display_result = result.map(item => item + ",<br>").join("");
+
+      document.getElementById("output").innerHTML = display_result;
+
+    
+  </script>
+</body>
